@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\audio\audio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\audio\sound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\editor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\game_object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\engine\transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\graphics\graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\graphics\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\graphics\sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\graphics\texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\input\input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\physics\body2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\physics\physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\python\collider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\python\pycomponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\python\python_engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\utility\file_utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\utility\json_utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\utility\python_utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\utility\singleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\src\utility\time_utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\audio\audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\audio\sound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\game_object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\engine\transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\graphics\graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\graphics\shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\graphics\sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\graphics\texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\input\input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\physics\body2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\physics\collider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\physics\physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\python\pycomponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\python\python_engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\utility\file_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\utility\json_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\utility\python_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\utility\singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\include\utility\time_utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E401DEB2-3165-3DAF-9F37-1AEA823786BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8AF60895-E700-39B9-BB90-DFC3DCEC2FA2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

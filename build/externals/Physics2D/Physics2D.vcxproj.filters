@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2aabb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2collider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2contact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2matrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2quadtree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\src\p2world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2aabb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2collider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2contact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2quadtree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include\p2world.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E401DEB2-3165-3DAF-9F37-1AEA823786BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8AF60895-E700-39B9-BB90-DFC3DCEC2FA2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp is up-to-date.
+  test_vectors.cpp
+  test_vectors.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Release\test_vectors.exe

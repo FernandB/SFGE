@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml\imgui-SFML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml\imgui-SFML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E401DEB2-3165-3DAF-9F37-1AEA823786BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8AF60895-E700-39B9-BB90-DFC3DCEC2FA2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

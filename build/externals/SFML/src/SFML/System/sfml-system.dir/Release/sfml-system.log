@@ -1,0 +1,24 @@
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/SFML/src/SFML/System/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/System/CMakeFiles/generate.stamp is up-to-date.
+  Clock.cpp
+  Err.cpp
+  Lock.cpp
+  Mutex.cpp
+  Sleep.cpp
+  String.cpp
+  Thread.cpp
+  ThreadLocal.cpp
+  Time.cpp
+  FileInputStream.cpp
+c:\users\batti\documents\sae\sfge\sfge\externals\sfml\src\sfml\system\fileinputstream.cpp(98): warning C4267: 'argument' : conversion de 'size_t' en 'long', perte possible de données
+  MemoryInputStream.cpp
+  ClockImpl.cpp
+c:\users\batti\documents\sae\sfge\sfge\externals\sfml\src\sfml\system\win32\clockimpl.cpp(48): warning C4996: 'GetVersion': a été déclaré déconseillé
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\um\sysinfoapi.h(184): note: voir la déclaration de 'GetVersion'
+  MutexImpl.cpp
+  SleepImpl.cpp
+  ThreadImpl.cpp
+  ThreadLocalImpl.cpp
+  Génération de code en cours...
+     Création de la bibliothèque C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Release/sfml-system.lib et de l'objet C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Release/sfml-system.exp
+  sfml-system.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\lib\Release\sfml-system-2.dll

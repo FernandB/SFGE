@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/SFML/src/SFML/Window/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Window/CMakeFiles/generate.stamp is up-to-date.
+  Context.cpp
+  GlContext.cpp
+  GlResource.cpp
+  Joystick.cpp
+  JoystickManager.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Touch.cpp
+  Sensor.cpp
+  SensorManager.cpp
+  VideoMode.cpp
+  Window.cpp
+  WindowImpl.cpp
+  WglContext.cpp
+  WglExtensions.cpp
+  InputImpl.cpp
+  JoystickImpl.cpp
+  SensorImpl.cpp
+  VideoModeImpl.cpp
+  WindowImplWin32.cpp
+  Génération de code en cours...
+     Création de la bibliothèque C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Release/sfml-window.lib et de l'objet C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Release/sfml-window.exp
+  sfml-window.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\lib\Release\sfml-window-2.dll

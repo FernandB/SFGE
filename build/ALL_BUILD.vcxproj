@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A2347A08-1796-3CFD-95F9-585E16BE664D}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\batti\Documents\SAE\SFGE\SFGE\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\SFML\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\json\src;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\pybind11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\batti\Documents\SAE\SFGE\SFGE\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\SFML\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\json\src;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\pybind11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\batti\Documents\SAE\SFGE\SFGE\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\SFML\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\json\src;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\pybind11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\batti\Documents\SAE\SFGE\SFGE\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\SFML\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\imgui-sfml;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\Physics2D\include;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\json\src;C:\Users\batti\Documents\SAE\SFGE\SFGE\externals\pybind11;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/batti/Documents/SAE/SFGE/SFGE -BC:/Users/batti/Documents/SAE/SFGE/SFGE/build --check-stamp-file C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCCompiler.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\IntelCompileFeatures.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\EnumeratedOption.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXFeature.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXStandardLibrary.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/batti/Documents/SAE/SFGE/SFGE -BC:/Users/batti/Documents/SAE/SFGE/SFGE/build --check-stamp-file C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCCompiler.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\IntelCompileFeatures.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\EnumeratedOption.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXFeature.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXStandardLibrary.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/batti/Documents/SAE/SFGE/SFGE -BC:/Users/batti/Documents/SAE/SFGE/SFGE/build --check-stamp-file C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCCompiler.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\IntelCompileFeatures.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\EnumeratedOption.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXFeature.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXStandardLibrary.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/batti/Documents/SAE/SFGE/SFGE -BC:/Users/batti/Documents/SAE/SFGE/SFGE/build --check-stamp-file C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCCompiler.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\3.9.1\CMakeRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\IntelCompileFeatures.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\EnumeratedOption.cmake;C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeParseArguments.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXFeature.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\cmake\CheckCXXStandardLibrary.cmake;C:\Users\batti\Documents\SAE\SFGE\SFGE\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\batti\Documents\SAE\SFGE\SFGE\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\ZERO_CHECK.vcxproj">
+      <Project>{4999BA26-27E6-35D4-A01F-44AD5A451E41}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\Physics2D\Physics2D.vcxproj">
+      <Project>{E954C0B6-504F-3EC1-B01F-D363C58605EE}</Project>
+      <Name>Physics2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\SFGE.vcxproj">
+      <Project>{FE0E06BF-D808-398E-A023-3F34C61AFB27}</Project>
+      <Name>SFGE</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\SFGE_COMMON.vcxproj">
+      <Project>{C87446D6-1248-3C72-929C-1B4E04C62349}</Project>
+      <Name>SFGE_COMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\imgui-sfml\imgui-sfml.vcxproj">
+      <Project>{FD573478-1224-3E12-8C6C-38C1DF312AAC}</Project>
+      <Name>imgui-sfml</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{8A338D48-7B03-3793-B708-9725FDE45856}</Project>
+      <Name>sfml-audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{2607276F-2F9E-3D72-8C5C-B16D26C8115E}</Project>
+      <Name>sfml-graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{1B778EC6-101C-38A8-81F8-28BA7EEB61D5}</Project>
+      <Name>sfml-main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{49F26C27-8EDF-3592-837A-AAE2C4B7BDE5}</Project>
+      <Name>sfml-network</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\src\SFML\System\sfml-system.vcxproj">
+      <Project>{843EB970-657A-32D2-A827-D35458369C63}</Project>
+      <Name>sfml-system</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{242526FE-0DE0-3205-B79C-3DDC4B8C89A8}</Project>
+      <Name>sfml-window</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_ImGui.vcxproj">
+      <Project>{DF5AB1DA-8669-382F-B15B-CA57A274CF78}</Project>
+      <Name>test_ImGui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_audio.vcxproj">
+      <Project>{3D51B8F0-9CF9-3E52-AE74-2BC703DA199B}</Project>
+      <Name>test_audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_contact.vcxproj">
+      <Project>{07FD1EFF-A040-33ED-AFF8-3C0737D59C54}</Project>
+      <Name>test_contact</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_editor.vcxproj">
+      <Project>{A436F0F1-C188-32BA-B57B-65E6D342027A}</Project>
+      <Name>test_editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_physics.vcxproj">
+      <Project>{C6038B1E-333D-3576-B0EF-58D40B760AC1}</Project>
+      <Name>test_physics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_pycomponent.vcxproj">
+      <Project>{A439D519-DE24-3E12-B49A-B011177E9089}</Project>
+      <Name>test_pycomponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_quadtree.vcxproj">
+      <Project>{62894D32-CA48-32EA-BD50-9514DB022720}</Project>
+      <Name>test_quadtree</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_scene.vcxproj">
+      <Project>{90517F6C-C3BA-32EB-8EF4-7B8D7AA81B8F}</Project>
+      <Name>test_scene</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_sfml_audio.vcxproj">
+      <Project>{F26DA3A4-5B5E-3563-9BAA-1C414167B172}</Project>
+      <Name>test_sfml_audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_shape.vcxproj">
+      <Project>{89967313-AC52-3F10-9FE1-27A17641E690}</Project>
+      <Name>test_shape</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_sprite.vcxproj">
+      <Project>{60C51563-4750-3B9D-8928-04A0DEB5BAA7}</Project>
+      <Name>test_sprite</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_switch_scene.vcxproj">
+      <Project>{D2DEB453-4F1D-37BF-B166-BC2F7CA97E33}</Project>
+      <Name>test_switch_scene</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_texture.vcxproj">
+      <Project>{CE5AD605-8D92-39D1-AEAE-12DE522B82F9}</Project>
+      <Name>test_texture</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_vectors.vcxproj">
+      <Project>{860CFAC4-F443-35B4-AFFC-7841B76A68B9}</Project>
+      <Name>test_vectors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

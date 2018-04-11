@@ -1,0 +1,26 @@
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/SFML/src/SFML/Audio/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Audio/CMakeFiles/generate.stamp is up-to-date.
+  ALCheck.cpp
+  AlResource.cpp
+  AudioDevice.cpp
+  Listener.cpp
+  Music.cpp
+  Sound.cpp
+  SoundBuffer.cpp
+  SoundBufferRecorder.cpp
+  InputSoundFile.cpp
+  OutputSoundFile.cpp
+  SoundRecorder.cpp
+  SoundSource.cpp
+  SoundStream.cpp
+  SoundFileFactory.cpp
+  SoundFileReaderFlac.cpp
+  SoundFileReaderOgg.cpp
+  SoundFileReaderWav.cpp
+c:\users\batti\documents\sae\sfge\sfge\externals\sfml\src\sfml\audio\soundfilereaderwav.cpp(149): warning C4018: '<' : incompatibilité signed/unsigned
+  SoundFileWriterFlac.cpp
+  SoundFileWriterOgg.cpp
+  SoundFileWriterWav.cpp
+  Génération de code en cours...
+     Création de la bibliothèque C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Release/sfml-audio.lib et de l'objet C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Release/sfml-audio.exp
+  sfml-audio.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\lib\Release\sfml-audio-2.dll

@@ -1,0 +1,3 @@
+﻿  test_pycomponent.cpp
+c:\users\batti\documents\sae\sfge\sfge\tests\test_pycomponent.cpp(70): warning C4305: 'argument' : troncation de 'double' à 'float'
+  test_pycomponent.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Release\test_pycomponent.exe

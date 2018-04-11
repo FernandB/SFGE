@@ -1,0 +1,14 @@
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/imgui-sfml/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/imgui-sfml/CMakeFiles/generate.stamp is up-to-date.
+  imgui-SFML.cpp
+c:\users\batti\documents\sae\sfge\sfge\externals\imgui-sfml\imgui-sfml.cpp(175): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\externals\imgui-sfml\imgui-sfml.cpp(280): warning C4244: 'argument' : conversion de 'const int' en 'float', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\externals\imgui-sfml\imgui-sfml.cpp(338): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+c:\users\batti\documents\sae\sfge\sfge\externals\imgui-sfml\imgui-sfml.cpp(363): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+c:\users\batti\documents\sae\sfge\sfge\externals\imgui-sfml\imgui-sfml.cpp(384): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+c:\users\batti\documents\sae\sfge\sfge\externals\imgui-sfml\imgui-sfml.cpp(582): warning C4312: 'cast de type' : la conversion de 'unsigned int' en 'void *' d'une taille supérieure
+  imgui_draw.cpp
+  imgui_demo.cpp
+  imgui.cpp
+  Génération de code en cours...
+  imgui-sfml.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\imgui-sfml\Release\imgui-sfml.lib

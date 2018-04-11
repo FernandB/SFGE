@@ -22,19 +22,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 #include <iostream>
-
-#include <engine/engine.h>
-#include <engine/log.h>
-
+#include <p2vector.h>
 
 int main()
 {
-    sfge::Log::GetInstance()->Msg("SFGE 0.1 by SAE Institute Switzerland AG");
-    sfge::Engine engine;
-	engine.Init();
-	engine.Start();
-#ifdef WIN32
+
+	p2Vec3 v1 = p2Vec3(1, 0, 3);
+	p2Vec3 v2 = p2Vec3(4, 5, 6);
+	p2Vec3 r=v1.Cross(v1, v2);
+
+	std::cout << r.x;
 	system("pause");
-#endif
-	return EXIT_SUCCESS;
+
 }

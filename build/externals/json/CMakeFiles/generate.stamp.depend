@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/json/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/json/cmake/config.cmake.in
+C:/Program Files/CMake/share/cmake-3.9/Modules/BasicConfigVersion-SameMajorVersion.cmake.in

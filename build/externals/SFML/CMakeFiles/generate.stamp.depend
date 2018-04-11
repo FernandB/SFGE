@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/SFML/CMakeLists.txt
+C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/SFML/cmake/Config.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFileCXX.cmake
