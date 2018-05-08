@@ -26,10 +26,80 @@ SOFTWARE.
 
 p2Collider * p2Contact::GetColliderA()
 {
-	return nullptr;
+	return colliderA;
 }
 
 p2Collider * p2Contact::GetColliderB()
 {
-	return nullptr;
+	return colliderB;
 }
+
+void p2Contact::SetTouching(bool touch)
+{
+	touching = touch;
+	
+}
+
+
+p2Contact::p2Contact(p2Collider * colA, p2Collider * colB):colliderA(colA),colliderB(colB)
+{
+}
+
+p2Contact::~p2Contact()
+{
+}
+
+
+bool p2Contact::isTouching()
+{
+	return touching;
+}
+
+//Verifie si les AABB touchent et change le boolean du contact
+void p2ContactManager::touch(p2Contact* contact)
+{
+	p2Collider* colliderA = contact->GetColliderA();
+	p2Collider* colliderB = contact->GetColliderB();
+	if (colliderA->GetShape()->GetType() == p2Shape::shapeType::RECTANGLE)
+	{
+		p2CircleShape* circle = dynamic_cast<p2CircleShape*>(colliderB->GetShape());
+		
+		float x = fmax(colliderA->GetBody()->GetAABB().bottomLeft.x, fmin(colliderB->GetBody()->GetAABB().GetCenter().x, colliderA->GetBody()->GetAABB().topRight.x));
+		float y = fmax(colliderA->GetBody()->GetAABB().bottomLeft.y, fmin(colliderB->GetBody()->GetAABB().GetCenter().y, colliderA->GetBody()->GetAABB().topRight.y));
+
+		float distance = sqrt((x - colliderB->GetBody()->GetAABB().GetCenter().x) * (x - colliderB->GetBody()->GetAABB().GetCenter().x) +
+			(y - colliderB->GetBody()->GetAABB().GetCenter().y) * (y - colliderB->GetBody()->GetAABB().GetCenter().y));
+
+		bool touching = distance < circle->GetRadius();
+		contact->SetTouching(touching);
+	}
+	else
+	{
+		if (colliderA->GetShape()->GetType() == p2Shape::shapeType::CIRCLE)
+		{
+			p2CircleShape* circle = dynamic_cast<p2CircleShape*>(colliderA->GetShape());
+			float x = fmax(colliderB->GetBody()->GetAABB().bottomLeft.x, fmin(colliderA->GetBody()->GetAABB().GetCenter().x, colliderB->GetBody()->GetAABB().topRight.x));
+			float y = fmax(colliderB->GetBody()->GetAABB().bottomLeft.y, fmin(colliderA->GetBody()->GetAABB().GetCenter().y, colliderB->GetBody()->GetAABB().topRight.y));
+
+			float distance = sqrt((x - colliderA->GetBody()->GetAABB().GetCenter().x) * (x - colliderA->GetBody()->GetAABB().GetCenter().x) +
+				(y - colliderA->GetBody()->GetAABB().GetCenter().y) * (y - colliderA->GetBody()->GetAABB().GetCenter().y));
+
+
+			bool touching = distance < circle->GetRadius();
+			contact->SetTouching(touching);
+		}
+
+	}
+	
+}
+
+void p2ContactListener::BeginContact(p2Contact* contact)
+{
+	
+}
+
+void p2ContactListener::EndContact(p2Contact* contact)
+{
+}
+
+

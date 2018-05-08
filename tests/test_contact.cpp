@@ -24,7 +24,10 @@ SOFTWARE.
 
 #include <engine/engine.h>
 #include <engine/scene.h>
-
+#include <p2body.h>
+#include <p2contact.h>
+#include <p2world.h>
+#include <p2collider.h>
 int main()
 {
 	sfge::Engine engine;
@@ -33,6 +36,8 @@ int main()
 	engine.GetSceneManager()->SetCurrentScene("data/scenes/test_contact.scene");
 
 	engine.Start();
+	
+
 #if WIN32
 	system("pause");
 #endif

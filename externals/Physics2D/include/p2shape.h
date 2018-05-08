@@ -33,6 +33,17 @@ SOFTWARE.
 class p2Shape
 {
 
+public:
+	enum shapeType
+	{
+		CIRCLE = 0,
+		RECTANGLE = 1
+	};
+
+	shapeType GetType();
+	virtual void SetType(shapeType type);
+private:
+	shapeType type;
 };
 
 /**
@@ -44,9 +55,13 @@ public:
 	/**
 	* \brief Setter for the radius
 	*/
+	void SetType(shapeType type)override;
+	p2CircleShape();
 	void SetRadius(float radius);
+	float GetRadius();
 private:
 	float m_Radius;
+
 };
 
 /** 
@@ -55,9 +70,14 @@ private:
 class p2RectShape : public p2Shape
 {
 public:
+	void SetType(shapeType type)override;
+	p2RectShape();
 	void SetSize(p2Vec2 size);
+	p2Vec2 GetSize();
 private:
 	p2Vec2 m_Size;
+	
+	
 };
 
 #endif

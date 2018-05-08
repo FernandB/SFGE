@@ -1,1 +1,13 @@
-﻿  SFGE_COMMON.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Debug\SFGE_COMMON.lib
+﻿  component.cpp
+  editor.cpp
+c:\users\batti\documents\sae\sfge\sfge\src\engine\editor.cpp(69): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\src\engine\editor.cpp(97): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  engine.cpp
+  game_object.cpp
+  body2d.cpp
+  physics.cpp
+  collider.cpp
+  pycomponent.cpp
+  python_engine.cpp
+  Génération de code en cours...
+  SFGE_COMMON.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Debug\SFGE_COMMON.lib

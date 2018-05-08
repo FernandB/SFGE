@@ -1,6 +1,6 @@
 ﻿  test_quadtree.cpp
-c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(50): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(57): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(58): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(64): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(54): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(62): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(63): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(69): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   test_quadtree.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Debug\test_quadtree.exe

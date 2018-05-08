@@ -24,7 +24,7 @@ SOFTWARE.
 
 #include <p2vector.h>
 #include <cmath>
-
+#include <iostream>
 p2Vec2::p2Vec2()
 {
 }
@@ -38,6 +38,19 @@ p2Vec2::p2Vec2(float x, float y):x(x),y(y)
 p2Vec2 p2Vec2::operator+(p2Vec2 v)
 {
 	return p2Vec2(x+v.x, y+v.y);
+}
+
+
+
+
+p2Vec3 p2Vec3::minus(p2Vec3 v,p2Vec3 v2)
+{
+	return p2Vec3(v.x - v2.x, v.y -v2.y,v.z-v2.z);
+}
+
+p2Vec3 p2Vec3::plus(p2Vec3 v, p2Vec3 v2)
+{
+	return p2Vec3(v2.x + v.x, v2.y + v.y, v2.z + v.z);
 }
 
 p2Vec2 p2Vec2::operator+=(p2Vec2 v)
@@ -134,4 +147,45 @@ p2Vec3 p2Vec3::Cross(p2Vec3 v1, p2Vec3 v2)
 	float zResult = (v1.x*v2.y) - (v1.y*v2.x);
 	return p2Vec3(xResult, yResult, zResult);
 
+}
+
+
+
+p2Vec3 p2Vec3::Lerp(p2Vec3 v1, p2Vec3 v2,float ratio)
+{
+	p2Vec3 vectorCrossed =(p2Vec3::Cross(v1, v2));
+	p2Vec3 vectorWithRatio = p2Vec3(vectorCrossed.x*ratio, vectorCrossed.y*ratio, vectorCrossed.z*ratio);
+	return vectorWithRatio;
+
+}
+
+p2Vec3 p2Vec3::Proj(p2Vec3 u, p2Vec3 v, float ratio)
+{
+	p2Vec3 vectorCrossed=p2Vec3::Cross(u,v);
+	p2Vec3 vectorDivisor= p2Vec3::Cross(p2Vec3::Cross(v, v), v);
+	return p2Vec3(u.x / v.x, u.y / v.y, u.z / v.z);
+}
+
+p2Vec3 p2Vec3::Refl(p2Vec3 inDir, p2Vec3 normale)
+{
+	p2Vec3 vectorToDouble = p2Vec3::Cross(inDir, normale);
+	p2Vec3 vectorToSubstract = p2Vec3(2*vectorToDouble.x, 2*vectorToDouble.y, 2*vectorToDouble.z);
+	return p2Vec3(inDir.x - vectorToSubstract.x,inDir.y-vectorToSubstract.y,inDir.z-vectorToSubstract.z);
+	
+
+}
+
+float p2Vec3::AnglesBetween(p2Vec3 u, p2Vec3 v)
+{
+	return p2Vec3::Dot(u, v)/sqrt(u.x*u.x+v.y*v.y);
+}
+
+void p2Vec3::Show(p2Vec3 vec3)
+{
+	std::cout << "x: "<<vec3.x<<"y: "<<vec3.y<<"z: "<<vec3.z;
+}
+
+void p2Vec2::Show(p2Vec2 vec2)
+{
+	std::cout << "x: " << vec2.x << "y: " << vec2.y << "z: ";
 }

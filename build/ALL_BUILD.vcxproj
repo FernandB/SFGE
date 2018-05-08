@@ -220,6 +220,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{A436F0F1-C188-32BA-B57B-65E6D342027A}</Project>
       <Name>test_editor</Name>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_matrix.vcxproj">
+      <Project>{86A3C56F-5913-324A-B818-6F001555C33D}</Project>
+      <Name>test_matrix</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\batti\Documents\SAE\SFGE\SFGE\build\test_physics.vcxproj">
       <Project>{C6038B1E-333D-3576-B0EF-58D40B760AC1}</Project>
       <Name>test_physics</Name>

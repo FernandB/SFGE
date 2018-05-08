@@ -32,6 +32,8 @@ SOFTWARE.
 */
 struct p2AABB
 {
+	p2AABB();
+	p2AABB(p2Vec2 position, p2Vec2 size);
 	p2Vec2 bottomLeft;
 	p2Vec2 topRight;
 

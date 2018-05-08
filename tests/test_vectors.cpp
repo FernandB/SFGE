@@ -23,13 +23,41 @@ SOFTWARE.
 */
 #include <iostream>
 #include "p2vector.h"
-int main()
+#include "SFML\Graphics.hpp"
+
+
+ void testCross()
 {
-	p2Vec3 v0 = p2Vec3();
-	p2Vec3 v1 = p2Vec3(1,0,3);
+	// if result is -15 6 5, it works.
+	
+	p2Vec3 v1 = p2Vec3(1, 0, 3);
 	p2Vec3 v2 = p2Vec3(4, 5, 6);
-	p2Vec3 r = v0.Cross(v1, v2);
-	std::cout << r.x<<" "<<r.y<<" "<<r.z;
-	system("pause");
+	p2Vec3 r = p2Vec3::Cross(v1, v2);
+	std::cout << r.x << " " << r.y << " " << r.z;
 
 }
+
+
+	
+
+ int main()
+ {
+	 p2Vec3 a(1.0f, 2.0f, 3.0f);
+	 p2Vec3 b(4.0f, 5.0f, 6.0f);
+	 
+		 p2Vec3::Show(p2Vec3::plus(a, b));
+	 p2Vec3::Show(p2Vec3::minus(a, b));
+	 std::cout << "Dot product: " << p2Vec3::Dot(a, b) << "\n";
+	 p2Vec3::Show(p2Vec3::Cross(a, b));
+	 p2Vec3::Show(p2Vec3::Lerp(a, b,0.5f));
+	 p2Vec3::Show(p2Vec3::Proj(a, b,0.5f));
+	p2Vec3::Show(p2Vec3::Proj(b, a,0.5f));
+	 p2Vec3::Show(p2Vec3::Refl(a, b));
+	 p2Vec3::Show(p2Vec3::Refl(b, a));
+	 std::cout << "Angle between the vectors: " << p2Vec3::AnglesBetween(a,
+		 b) << "\n";
+
+	 system("pause");
+	 return 0;
+
+ }

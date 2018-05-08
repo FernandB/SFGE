@@ -68,6 +68,8 @@ struct p2Vec2
 	*/
 	p2Vec3 to3();
 
+	void Show(p2Vec2 vec2);
+
 	float x = 0.0f;
 	float y = 0.0f;
 
@@ -75,6 +77,8 @@ struct p2Vec2
 
 struct p2Vec3
 {
+	static p2Vec3 minus(p2Vec3 v, p2Vec3 v2);
+	static p2Vec3 plus(p2Vec3 v, p2Vec3 v2);
 	p2Vec3();
 	p2Vec3(float x, float y, float z);
 	/**
@@ -85,6 +89,11 @@ struct p2Vec3
 	* \brief Cross product of two vectors
 	*/
 	static p2Vec3 Cross(p2Vec3 v1, p2Vec3 v2);
+	static p2Vec3 Lerp(p2Vec3 v1, p2Vec3 v2, float ratio);
+	static p2Vec3 Proj(p2Vec3 v1, p2Vec3 v2, float ratio);
+	static p2Vec3 Refl(p2Vec3 u, p2Vec3 v);
+	static float AnglesBetween(p2Vec3 u, p2Vec3 v);
+	static void Show(p2Vec3 vec3);
 	float x = 0.0f;
 	float y = 0.0f;
 	float z = 0.0f;

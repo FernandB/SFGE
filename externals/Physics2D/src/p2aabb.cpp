@@ -24,12 +24,22 @@ SOFTWARE.
 
 #include <p2aabb.h>
 
+p2AABB::p2AABB()
+{
+}
+
+p2AABB::p2AABB(p2Vec2 position, p2Vec2 size)
+{
+	bottomLeft = position - size / 2.0f;
+	topRight = position + size / 2.0f;
+}
+
 p2Vec2 p2AABB::GetCenter()
 {
-	return p2Vec2();
+	return p2Vec2((topRight.x-bottomLeft.x)/2.0f,(topRight.y-bottomLeft.y)/2.0f);
 }
 
 p2Vec2 p2AABB::GetExtends()
 {
-	return p2Vec2();
+	return topRight-GetCenter();
 }

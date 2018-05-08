@@ -60,7 +60,7 @@ public:
 	/**
 	* Return a list of all the p2Body that might collide
 	*/
-	void Retrieve();
+	std::list<p2Body*> Retrieve();
 	
 private:
 

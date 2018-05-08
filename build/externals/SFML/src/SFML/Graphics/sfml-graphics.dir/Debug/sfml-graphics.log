@@ -1,4 +1,6 @@
-﻿  BlendMode.cpp
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/externals/SFML/src/SFML/Graphics/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Graphics/CMakeFiles/generate.stamp is up-to-date.
+  BlendMode.cpp
   Color.cpp
   Font.cpp
   Glsl.cpp
@@ -96,4 +98,5 @@ c:\users\batti\documents\sae\sfge\sfge\externals\sfml\src\sfml\graphics\shader.c
   RenderTextureImplFBO.cpp
   RenderTextureImplDefault.cpp
   Génération de code en cours...
+     Création de la bibliothèque C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Debug/sfml-graphics-d.lib et de l'objet C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/lib/Debug/sfml-graphics-d.exp
   sfml-graphics.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\externals\SFML\lib\Debug\sfml-graphics-d-2.dll

@@ -27,7 +27,7 @@ SOFTWARE.
 #define SFGE_P2COLLIDER_H
 
 #include <p2shape.h>
-
+#include <p2body.h>
 /**
 * \brief Struct defining a p2Collider when creating one
 */
@@ -54,8 +54,17 @@ public:
 	* \brief Return the userData
 	*/
 	void* GetUserData();
+	p2Body* GetBody();
+	p2Shape* GetShape();
+ p2Collider(p2ColliderDef*,p2Body*);
+ ~p2Collider();
+
 private:
 	void* userData;
+	p2Body*  bodyAttached;
+	p2Shape* shape;
+	float restitution;
+	bool isSensor;
 };
 
 

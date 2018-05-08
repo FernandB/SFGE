@@ -38,14 +38,17 @@ SOFTWARE.
 #include <cstdio>      /* printf, scanf, puts, NULL */
 #include <cstdlib>     /* srand, rand */
 #include <ctime>       /* time */
-
+#include <p2quadtree.h>
 
 
 
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 800), "QuadTree test");
-	//QuadTree quad(0, { b2Vec2(0,0), sfge::pixel2meter(sf::Vector2i(800,800)) });
+	p2AABB bounds;
+	bounds.bottomLeft = p2Vec2(0,800);
+	bounds.topRight = p2Vec2(800,0);
+	p2QuadTree quad(0,bounds);
 	p2World world(p2Vec2(0.0f, 9.81f));
 
 	srand(time(NULL));

@@ -1,1 +1,14 @@
-﻿
+﻿  Checking Build System
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/System/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Main/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Window/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Network/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Graphics/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/SFML/src/SFML/Audio/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/imgui-sfml/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/Physics2D/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/json/CMakeFiles/generate.stamp is up-to-date.
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/externals/pybind11/CMakeFiles/generate.stamp is up-to-date.

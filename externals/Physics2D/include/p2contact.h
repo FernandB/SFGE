@@ -35,6 +35,19 @@ class p2Contact
 public:
 	p2Collider* GetColliderA();
 	p2Collider* GetColliderB();
+	void SetTouching(bool touch);
+	
+	
+	p2Contact(p2Collider*,p2Collider*);
+	~p2Contact();
+
+	bool isTouching();
+
+private:
+	p2Collider* colliderA;
+	p2Collider* colliderB;
+	bool touching;
+	
 };
 
 /**
@@ -45,6 +58,7 @@ class p2ContactListener
 public:
 	virtual void BeginContact(p2Contact* contact) = 0;
 	virtual void EndContact(p2Contact* contact) = 0;
+	
 };
 
 /**
@@ -52,6 +66,7 @@ public:
 */
 class p2ContactManager
 {
-
+public:
+	void touch(p2Contact * contact);
 };
 #endif

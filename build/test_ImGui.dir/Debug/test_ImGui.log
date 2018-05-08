@@ -1,2 +1,4 @@
-﻿  test_ImGui.cpp
+﻿  Building Custom Rule C:/Users/batti/Documents/SAE/SFGE/SFGE/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/batti/Documents/SAE/SFGE/SFGE/build/CMakeFiles/generate.stamp is up-to-date.
+  test_ImGui.cpp
   test_ImGui.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Debug\test_ImGui.exe

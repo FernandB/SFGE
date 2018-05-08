@@ -22,27 +22,88 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 #include <p2body.h>
-
+#include <p2collider.h>
+#include <iostream>
 p2Vec2 p2Body::GetLinearVelocity()
 {
 	return linearVelocity;
+}
+
+p2BodyType p2Body::GetType()
+{
+	return type;
 }
 
 void p2Body::SetLinearVelocity(p2Vec2 velocity)
 {
 	linearVelocity = velocity;
 }
+
+void p2Body::SetPosition(p2Vec2 pos)
+{
+	position = pos;
+	aabb.bottomLeft = position - aabb.GetExtends();
+	aabb.topRight = position + aabb.GetExtends();
+}
+
 float p2Body::GetAngularVelocity()
 {
 	return angularVelocity;
 }
 
+std::list<p2Collider*> p2Body::GetColliders()
+{
+	return colliders;
+}
+
 p2Vec2 p2Body::GetPosition()
 {
+
 	return position;
 }
 
-p2Collider * p2Body::CreateCollider(p2ColliderDef * colliderDef)
+p2AABB p2Body::GetAABB()
 {
-	return nullptr;
+
+	return aabb;
+}
+p2Collider* p2Body::CreateCollider(p2ColliderDef * colliderDef)
+{
+	p2Shape* shape = colliderDef->shape;
+	if (shape->GetType()==p2Shape::shapeType::CIRCLE)
+	{
+		p2CircleShape* shape2 = dynamic_cast<p2CircleShape*>(shape);
+		aabb = p2AABB(position,p2Vec2(shape2->GetRadius(), shape2->GetRadius()));
+	}
+	else
+	{
+		if (shape->GetType() == p2Shape::shapeType::RECTANGLE)
+		{
+			p2RectShape* shape1 = dynamic_cast<p2RectShape*>(shape);
+			aabb = p2AABB(position, shape1->GetSize());
+		}
+		else
+			std::cout << "Problem whith shape";
+		
+	}
+	 
+	
+	p2Collider* collider = new p2Collider(colliderDef, this);
+	colliders.push_back(collider);
+	return collider;
+}
+
+p2Body::p2Body(p2BodyDef* bodydef)
+{
+	type=bodydef->type;
+	position=bodydef->position;
+	linearVelocity= bodydef->linearVelocity;
+	gravityScale= bodydef->gravityScale;
+	angularVelocity = bodydef->angularVelocity;
+	aabb = bodydef->aabb;
+}
+
+p2Body::~p2Body()
+{
+	
 }
