@@ -27,6 +27,8 @@ SOFTWARE.
 
 #include <p2aabb.h>
 #include <list>
+#include <SFML\Graphics.hpp>
+
 class p2Collider;
 struct p2ColliderDef;
 
@@ -47,7 +49,7 @@ struct p2BodyDef
 	p2Vec2 linearVelocity;
 	float gravityScale;
 	float angularVelocity;
-	p2AABB aabb;
+	p2AABB* aabb;
 };
 
 /**
@@ -63,7 +65,7 @@ public:
 	float GetAngularVelocity();
 	std::list<p2Collider*> GetColliders();
 	p2Vec2 GetPosition();
-	p2AABB GetAABB();
+	p2AABB* GetAABB();
 	/**
 	* \brief Factory method creating a p2Collider
 	* \param colliderDef p2ColliderDef definition of the collider
@@ -71,9 +73,10 @@ public:
 	*/
 	p2Collider* CreateCollider(p2ColliderDef* colliderDef);
 	p2Body(p2BodyDef* bodyDef);
+	void Draw(sf::RenderWindow& window);
 	~p2Body();
 private:
-	p2AABB aabb;
+	p2AABB* aabb;
 	p2BodyType type;
 	p2Vec2 position;
 	p2Vec2 linearVelocity;

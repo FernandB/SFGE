@@ -25,6 +25,7 @@ SOFTWARE.
 #ifndef SFGE_P2SHAPE_H
 #define SFGE_P2SHAPE_H
 
+
 #include <p2vector.h>
 
 /**
@@ -42,8 +43,11 @@ public:
 
 	shapeType GetType();
 	virtual void SetType(shapeType type);
+	virtual p2Shape* clone() const = 0;
+	
 private:
 	shapeType type;
+
 };
 
 /**
@@ -52,6 +56,7 @@ private:
 class p2CircleShape : public p2Shape
 {
 public:
+	p2CircleShape* clone() const;
 	/**
 	* \brief Setter for the radius
 	*/
@@ -61,6 +66,7 @@ public:
 	float GetRadius();
 private:
 	float m_Radius;
+	
 
 };
 
@@ -72,6 +78,7 @@ class p2RectShape : public p2Shape
 public:
 	void SetType(shapeType type)override;
 	p2RectShape();
+	p2RectShape* clone() const;
 	void SetSize(p2Vec2 size);
 	p2Vec2 GetSize();
 private:

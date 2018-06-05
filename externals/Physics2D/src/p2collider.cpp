@@ -24,7 +24,8 @@ p2Collider::p2Collider(p2ColliderDef* colliderDef,p2Body* body)
 {
 	
 	restitution = colliderDef->restitution;
-	shape = colliderDef->shape;
+	shape = colliderDef->shape->clone();
+	
 	isSensor = colliderDef->isSensor;
 	bodyAttached = body;
 	userData = colliderDef->userData;
@@ -32,6 +33,6 @@ p2Collider::p2Collider(p2ColliderDef* colliderDef,p2Body* body)
 
 p2Collider::~p2Collider()
 {
-	
+	delete(shape);
 }
 

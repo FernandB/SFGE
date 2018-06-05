@@ -1,9 +1,18 @@
-﻿  component.cpp
+﻿  audio.cpp
+  sound.cpp
+  component.cpp
+  config.cpp
   editor.cpp
 c:\users\batti\documents\sae\sfge\sfge\src\engine\editor.cpp(69): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 c:\users\batti\documents\sae\sfge\sfge\src\engine\editor.cpp(97): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   engine.cpp
   game_object.cpp
+  scene.cpp
+  transform.cpp
+  graphics.cpp
+  shape.cpp
+  sprite.cpp
+  input.cpp
   body2d.cpp
   physics.cpp
   collider.cpp

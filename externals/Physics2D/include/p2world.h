@@ -36,6 +36,8 @@ SOFTWARE.
 class p2World
 {
 public:
+	bool enter = false;
+	bool exit = false;
 	p2World(p2Vec2 gravity);
 	~p2World();
 	/**
@@ -50,11 +52,14 @@ public:
 	* \brief Set the contact listener
 	*/
 	void SetContactListener(p2ContactListener* contactListener);
+	void test_contact(float dt);
+	
 private:
 	p2Vec2 m_Gravity;
 	std::list<p2Contact*> contacts;
 	std::vector<p2Body*> bodies;
 	p2ContactListener* listener;
+
 };
 
 #endif

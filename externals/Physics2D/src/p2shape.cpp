@@ -36,7 +36,22 @@ p2RectShape::p2RectShape()
 	SetType(p2Shape::shapeType::RECTANGLE);
 }
 
+p2RectShape * p2RectShape::clone() const
+{
+	p2RectShape* clone = new p2RectShape();
+	*clone = *this;
+	return clone;
+}
 
+
+
+p2CircleShape * p2CircleShape::clone() const
+{
+	p2CircleShape* clone = new p2CircleShape();
+
+	*clone = *this;
+	return clone;
+}
 void p2CircleShape::SetType(shapeType type2)
 {
 	p2Shape::SetType(type2);
@@ -45,6 +60,7 @@ void p2CircleShape::SetType(shapeType type2)
 p2CircleShape::p2CircleShape()
 {
 	SetType(p2Shape::shapeType::CIRCLE);
+	
 }
 
 
@@ -68,6 +84,7 @@ void p2Shape::SetType(shapeType type2)
 {
 	type = type2;
 }
+
 void p2RectShape::SetSize(p2Vec2 size)
 {
 	m_Size = size;

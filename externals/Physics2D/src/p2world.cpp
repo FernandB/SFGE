@@ -50,99 +50,8 @@ p2World::~p2World()
 
 void p2World::Step(float dt)
 {
-	p2Body* circle=nullptr;
-	p2Body* rectangle=nullptr;
-		//Move bodies
-		int i = 0;
-		while (i < bodies.size())
-		{
-			if (bodies[i]->GetType() == p2BodyType::DYNAMIC)
-			{
-			
-				circle = bodies[i];
-				
-
-			}
-			else
-			{
-				if (bodies[i]->GetType() == p2BodyType::STATIC)
-				{
-					
-					rectangle = bodies[i];
-				}
-			}
-
-			i++;
-		}
-
-		if (circle != nullptr&&rectangle != nullptr)
-		{
-
-			for (p2Collider* collider : circle->GetColliders())
-			{
-				for (p2Collider* collider2 : rectangle->GetColliders())
-				{
-					p2Contact* contact = new p2Contact(collider, collider2);
-					p2ContactManager* contactManager = new p2ContactManager;
-					contactManager->touch(contact);
-
-					if (contact->isTouching())
-					{
-						listener->BeginContact(contact);
-
-					}
-					else
-					{
-						
-						listener->EndContact(contact);
-						//Gravity: 
-						//circle->SetPosition(p2Vec2(circle->GetLinearVelocity().x, circle->GetLinearVelocity().y + dt) + circle->GetPosition());
-						if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-						{
-							// left key is pressed: move our character
-							circle->SetPosition(p2Vec2(circle->GetLinearVelocity().x - dt, circle->GetLinearVelocity().y) + circle->GetPosition());
-						}
-						else
-						{
-							if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-							{
-								circle->SetPosition(p2Vec2(circle->GetLinearVelocity().x + dt, circle->GetLinearVelocity().y) + circle->GetPosition());
-							}
-							else
-							{
-								if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-								{
-									circle->SetPosition(p2Vec2(circle->GetLinearVelocity().x, circle->GetLinearVelocity().y - dt) + circle->GetPosition());
-								}
-								else
-								{
-									if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-									{
-										circle->SetPosition(p2Vec2(circle->GetLinearVelocity().x, circle->GetLinearVelocity().y + dt) + circle->GetPosition());
-									}
-
-								}
-							}
-						}
-					}
-					delete(contact);
-					delete(contactManager);
-				}
-			}
-
-		}
-		std::cout << "Circle" << "\n";
-
-		std::cout << "Bottom: x:" << circle->GetAABB().bottomLeft.x << " y: " << circle->GetAABB().bottomLeft.y << "\n";
-		std::cout << "top: x:" << circle->GetAABB().topRight.x << " y: " << circle->GetAABB().topRight.y << "\n";
-		std::cout << circle->GetPosition().x<<" "<< circle->GetPosition().y<<"\n";
-
-		std::cout << "Rectangle" << "\n";
-		std::cout << "Bottom: x:" << rectangle->GetAABB().bottomLeft.x << " y: " << rectangle->GetAABB().bottomLeft.y << "\n";
-		std::cout << "top: x:" << rectangle->GetAABB().topRight.x << " y: " << rectangle->GetAABB().topRight.y << "\n";
-		std::cout << rectangle->GetPosition().x << " " << rectangle->GetPosition().y << "\n";
-		
-
+	//test_contact(dt);
+	
 		
 	
 }
@@ -159,5 +68,110 @@ void p2World::SetContactListener(p2ContactListener * contactListener)
 	listener=contactListener;
 }
 
+
+void p2World::test_contact(float dt)
+{
+	p2Body* circle = nullptr;
+	p2Body* rectangle = nullptr;
+	//Move bodies
+	int i = 0;
+	while (i < bodies.size())
+	{
+		if (bodies[i]->GetType() == p2BodyType::DYNAMIC)
+		{
+
+			circle = bodies[i];
+
+
+		}
+		else
+		{
+			if (bodies[i]->GetType() == p2BodyType::STATIC)
+			{
+
+				rectangle = bodies[i];
+			}
+		}
+
+		i++;
+	}
+
+	if (circle != nullptr&&rectangle != nullptr)
+	{
+
+		for (p2Collider* collider : circle->GetColliders())
+		{
+			for (p2Collider* collider2 : rectangle->GetColliders())
+			{
+				p2Contact* contact = new p2Contact(collider, collider2);
+				p2ContactManager* contactManager = new p2ContactManager;
+				contactManager->touch(contact);
+
+				if (contact->isTouching())
+				{
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+					{
+						// left key is pressed: move our character
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+					{
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+					{
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+					{
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+
+					if (!enter)
+					{
+						listener->BeginContact(contact);
+						enter = true;
+						exit = false;
+					}
+
+				}
+				else
+				{
+
+					if (enter && !exit)
+					{
+						listener->EndContact(contact);
+						enter = false;
+						exit = true;
+					}
+					//Gravity: 
+					//circle->SetPosition(p2Vec2(circle->GetLinearVelocity().x, circle->GetLinearVelocity().y + dt) + circle->GetPosition());
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+					{
+						// left key is pressed: move our character
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+					{
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+					{
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+					{
+						circle->SetPosition(p2Vec2(circle->GetLinearVelocity()*dt) + circle->GetPosition());
+					}
+
+				}
+				delete(contact);
+				delete(contactManager);
+			}
+		}
+
+	}
+}
 
 

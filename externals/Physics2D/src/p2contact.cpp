@@ -23,6 +23,7 @@ SOFTWARE.
 */
 
 #include <p2contact.h>
+#include <iostream>
 
 p2Collider * p2Contact::GetColliderA()
 {
@@ -55,41 +56,48 @@ bool p2Contact::isTouching()
 	return touching;
 }
 
+bool Collision(p2AABB box1, p2AABB box2)
+{
+	if ((box2.bottomLeft.x >= box1.bottomLeft.x + box1.size.x)      // trop à droite
+		|| (box2.bottomLeft.x + box2.size.x <= box1.bottomLeft.x) // trop à gauche
+		|| (box2.topRight.y >= box1.topRight.y + box1.size.y) // trop en bas
+		|| (box2.topRight.y + box2.size.y <= box1.topRight.y))  // trop en haut
+		return false;
+	else
+		return true;
+}
+
+
+
 //Verifie si les AABB touchent et change le boolean du contact
 void p2ContactManager::touch(p2Contact* contact)
 {
+	p2CircleShape* circle;
+	p2RectShape* rectangle;
 	p2Collider* colliderA = contact->GetColliderA();
 	p2Collider* colliderB = contact->GetColliderB();
 	if (colliderA->GetShape()->GetType() == p2Shape::shapeType::RECTANGLE)
 	{
-		p2CircleShape* circle = dynamic_cast<p2CircleShape*>(colliderB->GetShape());
+		 circle = dynamic_cast<p2CircleShape*>(colliderB->GetShape());
+		 rectangle = dynamic_cast<p2RectShape*>(colliderA->GetShape());
 		
-		float x = fmax(colliderA->GetBody()->GetAABB().bottomLeft.x, fmin(colliderB->GetBody()->GetAABB().GetCenter().x, colliderA->GetBody()->GetAABB().topRight.x));
-		float y = fmax(colliderA->GetBody()->GetAABB().bottomLeft.y, fmin(colliderB->GetBody()->GetAABB().GetCenter().y, colliderA->GetBody()->GetAABB().topRight.y));
 
-		float distance = sqrt((x - colliderB->GetBody()->GetAABB().GetCenter().x) * (x - colliderB->GetBody()->GetAABB().GetCenter().x) +
-			(y - colliderB->GetBody()->GetAABB().GetCenter().y) * (y - colliderB->GetBody()->GetAABB().GetCenter().y));
-
-		bool touching = distance < circle->GetRadius();
-		contact->SetTouching(touching);
 	}
 	else
 	{
 		if (colliderA->GetShape()->GetType() == p2Shape::shapeType::CIRCLE)
 		{
-			p2CircleShape* circle = dynamic_cast<p2CircleShape*>(colliderA->GetShape());
-			float x = fmax(colliderB->GetBody()->GetAABB().bottomLeft.x, fmin(colliderA->GetBody()->GetAABB().GetCenter().x, colliderB->GetBody()->GetAABB().topRight.x));
-			float y = fmax(colliderB->GetBody()->GetAABB().bottomLeft.y, fmin(colliderA->GetBody()->GetAABB().GetCenter().y, colliderB->GetBody()->GetAABB().topRight.y));
-
-			float distance = sqrt((x - colliderA->GetBody()->GetAABB().GetCenter().x) * (x - colliderA->GetBody()->GetAABB().GetCenter().x) +
-				(y - colliderA->GetBody()->GetAABB().GetCenter().y) * (y - colliderA->GetBody()->GetAABB().GetCenter().y));
+			circle = dynamic_cast<p2CircleShape*>(colliderA->GetShape());
+			rectangle = dynamic_cast<p2RectShape*>(colliderB->GetShape());
+			
 
 
-			bool touching = distance < circle->GetRadius();
-			contact->SetTouching(touching);
 		}
 
 	}
+	
+		bool touching = Collision(*colliderA->GetBody()->GetAABB(), *colliderB->GetBody()->GetAABB());
+		contact->SetTouching(touching);
 	
 }
 

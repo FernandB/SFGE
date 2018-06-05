@@ -34,13 +34,15 @@ struct p2AABB
 {
 	p2AABB();
 	p2AABB(p2Vec2 position, p2Vec2 size);
+
 	p2Vec2 bottomLeft;
 	p2Vec2 topRight;
-
+	p2Vec2 size;
 	/**
 	* \brief Calculate the center and return it
 	*/
 	p2Vec2 GetCenter();
+	p2Vec2 GetSize();
 	/**
 	* \brief Calculate the extends and return it
 	*/

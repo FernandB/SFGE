@@ -70,9 +70,10 @@ int main()
 		colliderDef.shape = &rectShape;
 
 		body->CreateCollider(&colliderDef);
-
+		
 		bodiesList.push_back(body);
 	}
+	
 	ImGui::SFML::Init(window);
 	sf::Clock clock;
 	while (window.isOpen())
@@ -94,7 +95,7 @@ int main()
 		world.Step(dt.asSeconds());
 		for (auto& body : bodiesList)
 		{
-			//obj.Update(dt.asSeconds());
+		
 			sf::Vector2f pos = sfge::meter2pixel(body->GetPosition());
 			p2Vec2 v = body->GetLinearVelocity();
 			if (pos.x < 0.0f && v.x<0.0f)
@@ -113,8 +114,15 @@ int main()
 			{
 				body->SetLinearVelocity(p2Vec2(v.x, -v.y));
 			}
+
+			
 		}
 		auto contacts = quad.Retrieve();
+		for each(p2Body* body in contacts)
+		{
+			quad.Insert(body);
+		}
+
 		ImGui::Begin("Stats");
 		{
 			std::ostringstream oss;
@@ -128,10 +136,12 @@ int main()
 
 		for (auto& obj : bodiesList)
 		{
-			//obj.Draw(window);
+			obj->SetPosition(p2Vec2(obj->GetLinearVelocity()*dt.asSeconds()) + obj->GetPosition());
+			obj->Draw(window);
+
 		}
 
-		//quad.Update(dt.asSeconds());
+		quad.Update(dt.asSeconds());
 		//quad.Draw(window);
 		ImGui::SFML::Render(window);
 

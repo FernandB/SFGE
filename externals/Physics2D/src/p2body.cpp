@@ -42,8 +42,9 @@ void p2Body::SetLinearVelocity(p2Vec2 velocity)
 void p2Body::SetPosition(p2Vec2 pos)
 {
 	position = pos;
-	aabb.bottomLeft = position - aabb.GetExtends();
-	aabb.topRight = position + aabb.GetExtends();
+	aabb->bottomLeft= position - p2Vec2(aabb->size.x / 2.0f, -aabb->size.y / 2.0f);
+	aabb->topRight = position + p2Vec2(aabb->size.x / 2.0f, -aabb->size.y / 2.0f);
+	
 }
 
 float p2Body::GetAngularVelocity()
@@ -59,36 +60,37 @@ std::list<p2Collider*> p2Body::GetColliders()
 p2Vec2 p2Body::GetPosition()
 {
 
-	return position;
+	return aabb->GetCenter();
 }
 
-p2AABB p2Body::GetAABB()
+p2AABB* p2Body::GetAABB()
 {
-
 	return aabb;
 }
 p2Collider* p2Body::CreateCollider(p2ColliderDef * colliderDef)
 {
+	p2Collider* collider; 
+
 	p2Shape* shape = colliderDef->shape;
 	if (shape->GetType()==p2Shape::shapeType::CIRCLE)
 	{
 		p2CircleShape* shape2 = dynamic_cast<p2CircleShape*>(shape);
-		aabb = p2AABB(position,p2Vec2(shape2->GetRadius(), shape2->GetRadius()));
+		aabb = new p2AABB(position,p2Vec2(shape2->GetRadius()*2.f, shape2->GetRadius()*2.f));
+		
 	}
 	else
 	{
 		if (shape->GetType() == p2Shape::shapeType::RECTANGLE)
 		{
 			p2RectShape* shape1 = dynamic_cast<p2RectShape*>(shape);
-			aabb = p2AABB(position, shape1->GetSize());
+			aabb = new p2AABB(position, shape1->GetSize());
 		}
 		else
 			std::cout << "Problem whith shape";
 		
 	}
 	 
-	
-	p2Collider* collider = new p2Collider(colliderDef, this);
+	collider= new p2Collider(colliderDef, this);
 	colliders.push_back(collider);
 	return collider;
 }
@@ -102,8 +104,27 @@ p2Body::p2Body(p2BodyDef* bodydef)
 	angularVelocity = bodydef->angularVelocity;
 	aabb = bodydef->aabb;
 }
+float meter2pixel(float meter)
+{
+	return meter * 100;
+}
+
+sf::Vector2f meter2pixel(p2Vec2 meter)
+{
+	return sf::Vector2f(meter2pixel(meter.x), meter2pixel(meter.y));
+}
+void p2Body::Draw(sf::RenderWindow& window)
+{
+	sf::Vector2f pos =meter2pixel(position);
+	sf::RectangleShape rectangle(meter2pixel(p2Vec2(GetAABB()->GetSize().x, GetAABB()->GetSize().y)));
+	rectangle.setPosition(pos.x,pos.y);
+	rectangle.setFillColor(sf::Color::Blue);
+	window.draw(rectangle);
+}
+
+
 
 p2Body::~p2Body()
 {
-	
+	delete(aabb);
 }

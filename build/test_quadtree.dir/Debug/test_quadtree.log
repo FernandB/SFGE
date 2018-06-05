@@ -3,4 +3,5 @@ c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(54): warning C424
 c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(62): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(63): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 c:\users\batti\documents\sae\sfge\sfge\tests\test_quadtree.cpp(69): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  test_quadtree.vcxproj -> C:\Users\batti\Documents\SAE\SFGE\SFGE\build\Debug\test_quadtree.exe
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(380,5): error MSB6003: Impossible d'exécuter la tâche exécutable spécifiée "CL.exe". L’opération demandée n’a pu s’accomplir sur un fichier ayant une section mappée utilisateur ouverte.
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(380,5): error MSB6003: 

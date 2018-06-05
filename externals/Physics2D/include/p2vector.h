@@ -34,6 +34,8 @@ struct p2Vec2
 {
 	p2Vec2();
 
+	~p2Vec2();
+
 	p2Vec2(float x, float y);
 
 	p2Vec2 operator+(p2Vec2 v);

@@ -61,7 +61,7 @@ public:
 	* Return a list of all the p2Body that might collide
 	*/
 	std::list<p2Body*> Retrieve();
-	
+	void Update(float dt);
 private:
 
 

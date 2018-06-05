@@ -3,18 +3,7 @@
 
 p2QuadTree::p2QuadTree(int nodeLevel, p2AABB bounds):m_NodeLevel(nodeLevel),m_Bounds(bounds)
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
-	sf::Vertex line[4];
-	line[0].position = sf::Vector2f(m_Bounds.bottomLeft.x, m_Bounds.bottomLeft.y);
-	line[0].color = sf::Color::Blue;
-	line[1].position = sf::Vector2f(m_Bounds.bottomLeft.x, m_Bounds.topRight.y);
-	line[1].color = sf::Color::Blue;
-	line[2].position = sf::Vector2f(m_Bounds.topRight.x, m_Bounds.topRight.y);
-	line[2].color = sf::Color::Blue;
-	line[3].position = sf::Vector2f(m_Bounds.topRight.x, m_Bounds.bottomLeft.y);
-	line[3].color = sf::Color::Blue;
 	
-	window.draw(line, 4, sf::Lines);
 }
 
 p2QuadTree::~p2QuadTree()
@@ -23,22 +12,76 @@ p2QuadTree::~p2QuadTree()
 
 void p2QuadTree::Clear()
 {
+	
+	for each (p2Body* object in m_Objects)
+	{
+		delete(object);
+	}
+
+	m_Objects.clear();
 }
 
 void p2QuadTree::Split()
 {
+
+		for (int i = 0; i <4; i++)
+		{
+			p2AABB bounds;
+			if (i == 0)
+			{
+				bounds = p2AABB(m_Bounds.GetCenter() / 2.f, m_Bounds.GetSize() / 2.f);
+			}
+			else
+			{
+				if (i == 1)
+				{
+					bounds = p2AABB(m_Bounds.GetCenter() + m_Bounds.GetCenter() / 2.f, m_Bounds.GetSize() / 2.f);
+				}
+				else
+				{
+					if (i == 2)
+					{
+						bounds = p2AABB(p2Vec2(m_Bounds.GetCenter().x / 2.f, m_Bounds.GetCenter().y/2.f + m_Bounds.GetCenter().y / 2.f), m_Bounds.GetSize() / 2.f);
+					}
+					else
+					{
+						if (i == 3)
+						{
+							bounds = p2AABB(p2Vec2(m_Bounds.GetCenter().x / 2.f + m_Bounds.GetCenter().x / 2.f, m_Bounds.GetCenter().y / 2.f + m_Bounds.GetCenter().y / 2.f), m_Bounds.GetSize() / 2.f);
+						}
+					}
+				}
+			}
+			
+				nodes[i] = new p2QuadTree(m_NodeLevel,bounds);
+				
+		}
+
+	m_NodeLevel++;
 }
 
 int p2QuadTree::GetIndex(p2Body * rect)
 {
-	return 0;
+	return m_NodeLevel;
 }
 
 void p2QuadTree::Insert(p2Body * obj)
 {
+	m_Objects.push_back(obj);
 }
 
 std::list<p2Body*> p2QuadTree::Retrieve()
 {
 	return m_Objects;
+}
+
+void p2QuadTree::Update(float dt)
+{
+	
+	if (m_Objects.size() > MAX_OBJECTS)
+	{
+		Split();
+	}
+	
+
 }

@@ -30,16 +30,24 @@ p2AABB::p2AABB()
 
 p2AABB::p2AABB(p2Vec2 position, p2Vec2 size)
 {
-	bottomLeft = position - size / 2.0f;
-	topRight = position + size / 2.0f;
+	bottomLeft = position - p2Vec2(size.x / 2.0f,-size.y/2.0f);
+	topRight = position + p2Vec2(size.x / 2.0f, -size.y / 2.0f);
+	this->size = size;
 }
+
 
 p2Vec2 p2AABB::GetCenter()
 {
-	return p2Vec2((topRight.x-bottomLeft.x)/2.0f,(topRight.y-bottomLeft.y)/2.0f);
+	return p2Vec2((topRight.x+bottomLeft.x)/2.0f,(bottomLeft.y-topRight.y)/2.0f);
+}
+
+p2Vec2 p2AABB::GetSize()
+{
+	size = p2Vec2(topRight.x - bottomLeft.x, bottomLeft.y - topRight.y);
+	return size;
 }
 
 p2Vec2 p2AABB::GetExtends()
 {
-	return topRight-GetCenter();
+	return (topRight - bottomLeft) / 2.f;
 }
